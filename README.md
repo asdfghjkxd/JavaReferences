@@ -1094,7 +1094,8 @@ Strings strings = new Strings();
 strings.main(new String[1]);
 ```
 
-    String from byte array: 
+    // XX represents illegal non-unicode chars
+    String from byte array: XX
     String from char array: Az
     String from int array: A@
     
@@ -1104,7 +1105,7 @@ strings.main(new String[1]);
     Code point count: 2
     Compare to: 83
     Compare to (ignore case): 115
-    Concat strings: This is a normal String
+    Concat strings: This is a normal StringXX
     Copy String: ABC
     Ends with: true
     Starts with: true
@@ -1145,7 +1146,7 @@ strings.main(new String[1]);
     Hashcode: -1745751625
     !=: true
     
-    +: This is a normal String
+    +: This is a normal StringXX
     
 
 ## Array
