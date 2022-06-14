@@ -1,4 +1,4 @@
-\documentclass[11pt]{article}
+\documentclass[9pt]{article}
 
     \usepackage[breakable]{tcolorbox}
     \usepackage{parskip} % Stop auto-indenting (to mimic markdown behaviour)
@@ -373,7 +373,7 @@
     
 
 \begin{document}
-    
+    \pagecolor{white}
     \maketitle
     
     
@@ -1271,15 +1271,15 @@ Cast to String: 123.23245234545432
 \subsubsection{Char}\label{char}}
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{6}{\boxspacing}
+\prompt{In}{incolor}{4}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{k+kd}{public} \PY{k+kd}{class} \PY{n+nc}{Chars} \PY{p}{\PYZob{}}
     \PY{k+kd}{public} \PY{k+kd}{static} \PY{k+kt}{void} \PY{n+nf}{main}\PY{p}{(}\PY{n}{String}\PY{o}{[}\PY{o}{]} \PY{n}{args}\PY{p}{)} \PY{p}{\PYZob{}}
         \PY{c+c1}{// Other stuff about unicode specs is not included}
         \PY{n}{System}\PY{p}{.}\PY{n+na}{out}\PY{p}{.}\PY{n+na}{println}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{Number of bytes to represent a char value: }\PY{l+s}{\PYZdq{}} \PY{o}{+} \PY{n}{Character}\PY{p}{.}\PY{n+na}{BYTES}\PY{p}{)}\PY{p}{;}
         \PY{n}{System}\PY{p}{.}\PY{n+na}{out}\PY{p}{.}\PY{n+na}{println}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{Number of bits to represent a char value: }\PY{l+s}{\PYZdq{}} \PY{o}{+} \PY{n}{Character}\PY{p}{.}\PY{n+na}{SIZE}\PY{p}{)}\PY{p}{;}
-        \PY{n}{System}\PY{p}{.}\PY{n+na}{out}\PY{p}{.}\PY{n+na}{println}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{Min: }\PY{l+s}{\PYZdq{}} \PY{o}{+} \PY{n}{Character}\PY{p}{.}\PY{n+na}{MIN\PYZus{}VALUE}\PY{p}{)}\PY{p}{;}
-        \PY{n}{System}\PY{p}{.}\PY{n+na}{out}\PY{p}{.}\PY{n+na}{println}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{Max: }\PY{l+s}{\PYZdq{}} \PY{o}{+} \PY{n}{Character}\PY{p}{.}\PY{n+na}{MAX\PYZus{}VALUE}\PY{p}{)}\PY{p}{;}
+        \PY{c+c1}{// System.out.println(\PYZdq{}Min: \PYZdq{} + Character.MIN\PYZus{}VALUE); =\PYZgt{} unprintable}
+        \PY{c+c1}{// System.out.println(\PYZdq{}Max: \PYZdq{} + Character.MAX\PYZus{}VALUE); =\PYZgt{} unprintable}
         \PY{n}{System}\PY{p}{.}\PY{n+na}{out}\PY{p}{.}\PY{n+na}{println}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{Type: }\PY{l+s}{\PYZdq{}} \PY{o}{+} \PY{n}{Character}\PY{p}{.}\PY{n+na}{TYPE}\PY{p}{)}\PY{p}{;}
         \PY{n}{System}\PY{p}{.}\PY{n+na}{out}\PY{p}{.}\PY{n+na}{println}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{Max Radix: }\PY{l+s}{\PYZdq{}} \PY{o}{+} \PY{n}{Character}\PY{p}{.}\PY{n+na}{MAX\PYZus{}RADIX}\PY{p}{)}\PY{p}{;}
         \PY{n}{System}\PY{p}{.}\PY{n+na}{out}\PY{p}{.}\PY{n+na}{println}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{Min Radix: }\PY{l+s}{\PYZdq{}} \PY{o}{+} \PY{n}{Character}\PY{p}{.}\PY{n+na}{MIN\PYZus{}RADIX}\PY{p}{)}\PY{p}{;}
@@ -1297,8 +1297,8 @@ Cast to String: 123.23245234545432
         \PY{n}{System}\PY{p}{.}\PY{n+na}{out}\PY{p}{.}\PY{n+na}{println}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{Code point count (ASCII value) in char array: }\PY{l+s}{\PYZdq{}} \PY{o}{+} \PY{n}{Character}\PY{p}{.}\PY{n+na}{codePointCount}\PY{p}{(}\PY{n}{third}\PY{p}{,} \PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{)}\PY{p}{)}\PY{p}{;}
         \PY{n}{System}\PY{p}{.}\PY{n+na}{out}\PY{p}{.}\PY{n+na}{println}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{Compare chars: }\PY{l+s}{\PYZdq{}} \PY{o}{+} \PY{n}{Character}\PY{p}{.}\PY{n+na}{compare}\PY{p}{(}\PY{n}{first}\PY{p}{,} \PY{n}{second}\PY{p}{)}\PY{p}{)}\PY{p}{;}
         \PY{n}{System}\PY{p}{.}\PY{n+na}{out}\PY{p}{.}\PY{n+na}{println}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{Digit (Numeric value of char in specific radix): }\PY{l+s}{\PYZdq{}} \PY{o}{+} \PY{n}{Character}\PY{p}{.}\PY{n+na}{digit}\PY{p}{(}\PY{n}{first}\PY{p}{,} \PY{l+m+mi}{0}\PY{p}{)}\PY{p}{)}\PY{p}{;}
-        \PY{n}{System}\PY{p}{.}\PY{n+na}{out}\PY{p}{.}\PY{n+na}{println}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{Digit (Code Point in specific radix): }\PY{l+s}{\PYZdq{}} \PY{o}{+} \PY{n}{Character}\PY{p}{.}\PY{n+na}{digit}\PY{p}{(}\PY{l+m+mi}{65}\PY{p}{,} \PY{l+m+mi}{0}\PY{p}{)}\PY{p}{)}\PY{p}{;}
-        \PY{n}{System}\PY{p}{.}\PY{n+na}{out}\PY{p}{.}\PY{n+na}{println}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{Char representation of specific digit in radix: }\PY{l+s}{\PYZdq{}} \PY{o}{+} \PY{n}{Character}\PY{p}{.}\PY{n+na}{forDigit}\PY{p}{(}\PY{l+m+mi}{65}\PY{p}{,} \PY{l+m+mi}{0}\PY{p}{)}\PY{p}{)}\PY{p}{;}
+        \PY{c+c1}{// System.out.println(\PYZdq{}Digit (Code Point in specific radix): \PYZdq{} + Character.digit(65, 0));}
+        \PY{c+c1}{// System.out.println(\PYZdq{}Char representation of specific digit in radix: \PYZdq{} + Character.forDigit(65, 0));}
         \PY{n}{System}\PY{p}{.}\PY{n+na}{out}\PY{p}{.}\PY{n+na}{println}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{Directional Property of Char: }\PY{l+s}{\PYZdq{}} \PY{o}{+} \PY{n}{Character}\PY{p}{.}\PY{n+na}{getDirectionality}\PY{p}{(}\PY{n}{first}\PY{p}{)}\PY{p}{)}\PY{p}{;}
         \PY{n}{System}\PY{p}{.}\PY{n+na}{out}\PY{p}{.}\PY{n+na}{println}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{Directional Property of Code point: }\PY{l+s}{\PYZdq{}} \PY{o}{+} \PY{n}{Character}\PY{p}{.}\PY{n+na}{getDirectionality}\PY{p}{(}\PY{l+m+mi}{65}\PY{p}{)}\PY{p}{)}\PY{p}{;}
         \PY{n}{System}\PY{p}{.}\PY{n+na}{out}\PY{p}{.}\PY{n+na}{println}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{Numerical Value of char: }\PY{l+s}{\PYZdq{}} \PY{o}{+} \PY{n}{Character}\PY{p}{.}\PY{n+na}{getNumericValue}\PY{p}{(}\PY{n}{first}\PY{p}{)}\PY{p}{)}\PY{p}{;}
@@ -1321,7 +1321,7 @@ Cast to String: 123.23245234545432
         \PY{n}{System}\PY{p}{.}\PY{n+na}{out}\PY{p}{.}\PY{n+na}{println}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{To Upper Case: }\PY{l+s}{\PYZdq{}} \PY{o}{+} \PY{n}{Character}\PY{p}{.}\PY{n+na}{toUpperCase}\PY{p}{(}\PY{n}{first}\PY{p}{)}\PY{p}{)}\PY{p}{;}
         \PY{n}{System}\PY{p}{.}\PY{n+na}{out}\PY{p}{.}\PY{n+na}{println}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{Is Space Char: }\PY{l+s}{\PYZdq{}} \PY{o}{+} \PY{n}{Character}\PY{p}{.}\PY{n+na}{isSpaceChar}\PY{p}{(}\PY{n}{first}\PY{p}{)}\PY{p}{)}\PY{p}{;}
         \PY{n}{System}\PY{p}{.}\PY{n+na}{out}\PY{p}{.}\PY{n+na}{println}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{Is Whitespace Char: }\PY{l+s}{\PYZdq{}} \PY{o}{+} \PY{n}{Character}\PY{p}{.}\PY{n+na}{isWhitespace}\PY{p}{(}\PY{n}{first}\PY{p}{)}\PY{p}{)}\PY{p}{;}
-        \PY{n}{System}\PY{p}{.}\PY{n+na}{out}\PY{p}{.}\PY{n+na}{println}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{Reverse Bytes: }\PY{l+s}{\PYZdq{}} \PY{o}{+} \PY{n}{Character}\PY{p}{.}\PY{n+na}{reverseBytes}\PY{p}{(}\PY{n}{first}\PY{p}{)}\PY{p}{)}\PY{p}{;}
+        \PY{c+c1}{// System.out.println(\PYZdq{}Reverse Bytes: \PYZdq{} + Character.reverseBytes(first));}
         \PY{n}{System}\PY{p}{.}\PY{n+na}{out}\PY{p}{.}\PY{n+na}{println}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{Convert to String: }\PY{l+s}{\PYZdq{}} \PY{o}{+} \PY{n}{Character}\PY{p}{.}\PY{n+na}{toString}\PY{p}{(}\PY{n}{first}\PY{p}{)}\PY{p}{)}\PY{p}{;}
         \PY{n}{System}\PY{p}{.}\PY{n+na}{out}\PY{p}{.}\PY{n+na}{println}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{Value of: }\PY{l+s}{\PYZdq{}} \PY{o}{+} \PY{n}{Character}\PY{p}{.}\PY{n+na}{valueOf}\PY{p}{(}\PY{n}{first}\PY{p}{)}\PY{p}{)}\PY{p}{;}
         \PY{n}{System}\PY{p}{.}\PY{n+na}{out}\PY{p}{.}\PY{n+na}{println}\PY{p}{(}\PY{p}{)}\PY{p}{;}
@@ -1366,8 +1366,6 @@ Cast to String: 123.23245234545432
     \begin{Verbatim}[commandchars=\\\{\}]
 Number of bytes to represent a char value: 2
 Number of bits to represent a char value: 16
-Min:  
-Max: ￿
 Type: char
 Max Radix: 36
 Min Radix: 2
@@ -1380,8 +1378,6 @@ Code point before (ASCII value) in char array with limits: 98
 Code point count (ASCII value) in char array: 1
 Compare chars: -57
 Digit (Numeric value of char in specific radix): -1
-Digit (Code Point in specific radix): -1
-Char representation of specific digit in radix:  
 Directional Property of Char: 0
 Directional Property of Code point: 0
 Numerical Value of char: 10
@@ -1402,7 +1398,6 @@ Is Upper Case: true
 To Upper Case: A
 Is Space Char: false
 Is Whitespace Char: false
-Reverse Bytes: 䄀
 Convert to String: A
 Value of: A
 
@@ -1434,7 +1429,7 @@ Cast to String: A
 \subsubsection{String}\label{string}}
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{7}{\boxspacing}
+\prompt{In}{incolor}{6}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{k+kn}{import} \PY{n+nn}{java.nio.charset.StandardCharsets}\PY{p}{;}
 
@@ -1450,7 +1445,7 @@ Cast to String: A
         \PY{n}{String} \PY{n}{intStr} \PY{o}{=} \PY{k}{new} \PY{n}{String}\PY{p}{(}\PY{n}{ints}\PY{p}{,} \PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{)}\PY{p}{;}
         \PY{n}{String} \PY{n}{normalString} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{This is a normal String}\PY{l+s}{\PYZdq{}}\PY{p}{;}
 
-        \PY{n}{System}\PY{p}{.}\PY{n+na}{out}\PY{p}{.}\PY{n+na}{println}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{String from byte array: }\PY{l+s}{\PYZdq{}} \PY{o}{+} \PY{n}{byteStr}\PY{p}{)}\PY{p}{;}
+        \PY{c+c1}{// System.out.println(\PYZdq{}String from byte array: \PYZdq{} + byteStr);}
         \PY{n}{System}\PY{p}{.}\PY{n+na}{out}\PY{p}{.}\PY{n+na}{println}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{String from char array: }\PY{l+s}{\PYZdq{}} \PY{o}{+} \PY{n}{charStr}\PY{p}{)}\PY{p}{;}
         \PY{n}{System}\PY{p}{.}\PY{n+na}{out}\PY{p}{.}\PY{n+na}{println}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{String from int array: }\PY{l+s}{\PYZdq{}} \PY{o}{+} \PY{n}{intStr}\PY{p}{)}\PY{p}{;}
         \PY{n}{System}\PY{p}{.}\PY{n+na}{out}\PY{p}{.}\PY{n+na}{println}\PY{p}{(}\PY{p}{)}\PY{p}{;}
@@ -1460,14 +1455,14 @@ Cast to String: A
         \PY{n}{System}\PY{p}{.}\PY{n+na}{out}\PY{p}{.}\PY{n+na}{println}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{Code point at: }\PY{l+s}{\PYZdq{}} \PY{o}{+} \PY{n}{normalString}\PY{p}{.}\PY{n+na}{codePointAt}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{)}\PY{p}{;}
         \PY{n}{System}\PY{p}{.}\PY{n+na}{out}\PY{p}{.}\PY{n+na}{println}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{Code point before: }\PY{l+s}{\PYZdq{}} \PY{o}{+} \PY{n}{normalString}\PY{p}{.}\PY{n+na}{codePointBefore}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{)}\PY{p}{;}
         \PY{n}{System}\PY{p}{.}\PY{n+na}{out}\PY{p}{.}\PY{n+na}{println}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{Code point count: }\PY{l+s}{\PYZdq{}} \PY{o}{+} \PY{n}{normalString}\PY{p}{.}\PY{n+na}{codePointCount}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{)}\PY{p}{)}\PY{p}{;}
-        \PY{n}{System}\PY{p}{.}\PY{n+na}{out}\PY{p}{.}\PY{n+na}{println}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{Compare to: }\PY{l+s}{\PYZdq{}} \PY{o}{+} \PY{n}{normalString}\PY{p}{.}\PY{n+na}{compareTo}\PY{p}{(}\PY{n}{byteStr}\PY{p}{)}\PY{p}{)}\PY{p}{;}
-        \PY{n}{System}\PY{p}{.}\PY{n+na}{out}\PY{p}{.}\PY{n+na}{println}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{Compare to (ignore case): }\PY{l+s}{\PYZdq{}} \PY{o}{+} \PY{n}{normalString}\PY{p}{.}\PY{n+na}{compareToIgnoreCase}\PY{p}{(}\PY{n}{byteStr}\PY{p}{)}\PY{p}{)}\PY{p}{;}
-        \PY{n}{System}\PY{p}{.}\PY{n+na}{out}\PY{p}{.}\PY{n+na}{println}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{Concat strings: }\PY{l+s}{\PYZdq{}} \PY{o}{+} \PY{n}{normalString}\PY{p}{.}\PY{n+na}{concat}\PY{p}{(}\PY{n}{byteStr}\PY{p}{)}\PY{p}{)}\PY{p}{;}
+        \PY{n}{System}\PY{p}{.}\PY{n+na}{out}\PY{p}{.}\PY{n+na}{println}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{Compare to: }\PY{l+s}{\PYZdq{}} \PY{o}{+} \PY{n}{normalString}\PY{p}{.}\PY{n+na}{compareTo}\PY{p}{(}\PY{n}{charStr}\PY{p}{)}\PY{p}{)}\PY{p}{;}
+        \PY{n}{System}\PY{p}{.}\PY{n+na}{out}\PY{p}{.}\PY{n+na}{println}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{Compare to (ignore case): }\PY{l+s}{\PYZdq{}} \PY{o}{+} \PY{n}{normalString}\PY{p}{.}\PY{n+na}{compareToIgnoreCase}\PY{p}{(}\PY{n}{charStr}\PY{p}{)}\PY{p}{)}\PY{p}{;}
+        \PY{n}{System}\PY{p}{.}\PY{n+na}{out}\PY{p}{.}\PY{n+na}{println}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{Concat strings: }\PY{l+s}{\PYZdq{}} \PY{o}{+} \PY{n}{normalString}\PY{p}{.}\PY{n+na}{concat}\PY{p}{(}\PY{n}{charStr}\PY{p}{)}\PY{p}{)}\PY{p}{;}
         \PY{n}{System}\PY{p}{.}\PY{n+na}{out}\PY{p}{.}\PY{n+na}{println}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{Copy String: }\PY{l+s}{\PYZdq{}} \PY{o}{+} \PY{n}{String}\PY{p}{.}\PY{n+na}{copyValueOf}\PY{p}{(}\PY{k}{new} \PY{k+kt}{char}\PY{o}{[}\PY{o}{]} \PY{p}{\PYZob{}}\PY{l+s+sc}{\PYZsq{}A\PYZsq{}}\PY{p}{,} \PY{l+s+sc}{\PYZsq{}B\PYZsq{}}\PY{p}{,} \PY{l+s+sc}{\PYZsq{}C\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{)}\PY{p}{)}\PY{p}{;}
         \PY{n}{System}\PY{p}{.}\PY{n+na}{out}\PY{p}{.}\PY{n+na}{println}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{Ends with: }\PY{l+s}{\PYZdq{}} \PY{o}{+} \PY{n}{normalString}\PY{p}{.}\PY{n+na}{endsWith}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{g}\PY{l+s}{\PYZdq{}}\PY{p}{)}\PY{p}{)}\PY{p}{;}
         \PY{n}{System}\PY{p}{.}\PY{n+na}{out}\PY{p}{.}\PY{n+na}{println}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{Starts with: }\PY{l+s}{\PYZdq{}} \PY{o}{+} \PY{n}{normalString}\PY{p}{.}\PY{n+na}{startsWith}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{T}\PY{l+s}{\PYZdq{}}\PY{p}{)}\PY{p}{)}\PY{p}{;}
-        \PY{n}{System}\PY{p}{.}\PY{n+na}{out}\PY{p}{.}\PY{n+na}{println}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{Equals: }\PY{l+s}{\PYZdq{}} \PY{o}{+} \PY{n}{normalString}\PY{p}{.}\PY{n+na}{equals}\PY{p}{(}\PY{n}{byteStr}\PY{p}{)}\PY{p}{)}\PY{p}{;}
-        \PY{n}{System}\PY{p}{.}\PY{n+na}{out}\PY{p}{.}\PY{n+na}{println}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{Equals (Ignore case): }\PY{l+s}{\PYZdq{}} \PY{o}{+} \PY{n}{normalString}\PY{p}{.}\PY{n+na}{equalsIgnoreCase}\PY{p}{(}\PY{n}{byteStr}\PY{p}{)}\PY{p}{)}\PY{p}{;}
+        \PY{n}{System}\PY{p}{.}\PY{n+na}{out}\PY{p}{.}\PY{n+na}{println}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{Equals: }\PY{l+s}{\PYZdq{}} \PY{o}{+} \PY{n}{normalString}\PY{p}{.}\PY{n+na}{equals}\PY{p}{(}\PY{n}{charStr}\PY{p}{)}\PY{p}{)}\PY{p}{;}
+        \PY{n}{System}\PY{p}{.}\PY{n+na}{out}\PY{p}{.}\PY{n+na}{println}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{Equals (Ignore case): }\PY{l+s}{\PYZdq{}} \PY{o}{+} \PY{n}{normalString}\PY{p}{.}\PY{n+na}{equalsIgnoreCase}\PY{p}{(}\PY{n}{charStr}\PY{p}{)}\PY{p}{)}\PY{p}{;}
         \PY{k+kt}{char}\PY{o}{[}\PY{o}{]} \PY{n}{temp} \PY{o}{=} \PY{k}{new} \PY{k+kt}{char}\PY{o}{[}\PY{l+m+mi}{10}\PY{o}{]}\PY{p}{;}
         \PY{n}{normalString}\PY{p}{.}\PY{n+na}{getChars}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{10}\PY{p}{,} \PY{n}{temp}\PY{p}{,} \PY{l+m+mi}{0}\PY{p}{)}\PY{p}{;}
         \PY{n}{System}\PY{p}{.}\PY{n+na}{out}\PY{p}{.}\PY{n+na}{println}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{Get Chars: }\PY{l+s}{\PYZdq{}} \PY{o}{+} \PY{n}{temp}\PY{p}{.}\PY{n+na}{toString}\PY{p}{(}\PY{p}{)}\PY{p}{)}\PY{p}{;}
@@ -1480,7 +1475,7 @@ Cast to String: A
         \PY{n}{System}\PY{p}{.}\PY{n+na}{out}\PY{p}{.}\PY{n+na}{println}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{Is Empty: }\PY{l+s}{\PYZdq{}} \PY{o}{+} \PY{n}{normalString}\PY{p}{.}\PY{n+na}{isEmpty}\PY{p}{(}\PY{p}{)}\PY{p}{)}\PY{p}{;}
         \PY{n}{System}\PY{p}{.}\PY{n+na}{out}\PY{p}{.}\PY{n+na}{println}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{Length: }\PY{l+s}{\PYZdq{}} \PY{o}{+} \PY{n}{normalString}\PY{p}{.}\PY{n+na}{length}\PY{p}{(}\PY{p}{)}\PY{p}{)}\PY{p}{;}
         \PY{n}{System}\PY{p}{.}\PY{n+na}{out}\PY{p}{.}\PY{n+na}{println}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{Offset by code points: }\PY{l+s}{\PYZdq{}} \PY{o}{+} \PY{n}{normalString}\PY{p}{.}\PY{n+na}{offsetByCodePoints}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{9}\PY{p}{)}\PY{p}{)}\PY{p}{;}
-        \PY{n}{System}\PY{p}{.}\PY{n+na}{out}\PY{p}{.}\PY{n+na}{println}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{Check if region of string are equal: }\PY{l+s}{\PYZdq{}} \PY{o}{+} \PY{n}{normalString}\PY{p}{.}\PY{n+na}{regionMatches}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,} \PY{n}{byteStr}\PY{p}{,} \PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{10}\PY{p}{)}\PY{p}{)}\PY{p}{;}
+        \PY{n}{System}\PY{p}{.}\PY{n+na}{out}\PY{p}{.}\PY{n+na}{println}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{Check if region of string are equal: }\PY{l+s}{\PYZdq{}} \PY{o}{+} \PY{n}{normalString}\PY{p}{.}\PY{n+na}{regionMatches}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,} \PY{n}{charStr}\PY{p}{,} \PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{10}\PY{p}{)}\PY{p}{)}\PY{p}{;}
         \PY{n}{System}\PY{p}{.}\PY{n+na}{out}\PY{p}{.}\PY{n+na}{println}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{String duplication and concatenation (A * 5 in python): }\PY{l+s}{\PYZdq{}} \PY{o}{+} \PY{n}{normalString}\PY{p}{.}\PY{n+na}{repeat}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{)}\PY{p}{;}
         \PY{n}{System}\PY{p}{.}\PY{n+na}{out}\PY{p}{.}\PY{n+na}{println}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{Replace char in string: }\PY{l+s}{\PYZdq{}} \PY{o}{+} \PY{n}{normalString}\PY{p}{.}\PY{n+na}{replace}\PY{p}{(}\PY{l+s+sc}{\PYZsq{}T\PYZsq{}}\PY{p}{,} \PY{l+s+sc}{\PYZsq{}A\PYZsq{}}\PY{p}{)}\PY{p}{)}\PY{p}{;}
         \PY{n}{System}\PY{p}{.}\PY{n+na}{out}\PY{p}{.}\PY{n+na}{println}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{Strip whitespaces: }\PY{l+s}{\PYZdq{}} \PY{o}{+} \PY{l+s}{\PYZdq{}}\PY{l+s}{    stripped      }\PY{l+s}{\PYZdq{}}\PY{p}{.}\PY{n+na}{strip}\PY{p}{(}\PY{p}{)}\PY{p}{)}\PY{p}{;}
@@ -1510,11 +1505,11 @@ Cast to String: A
         \PY{n}{System}\PY{p}{.}\PY{n+na}{out}\PY{p}{.}\PY{n+na}{println}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{Hashcode: }\PY{l+s}{\PYZdq{}} \PY{o}{+} \PY{n}{normalString}\PY{p}{.}\PY{n+na}{hashCode}\PY{p}{(}\PY{p}{)}\PY{p}{)}\PY{p}{;}
 
         \PY{c+c1}{// Comparator (not a}
-        \PY{n}{System}\PY{p}{.}\PY{n+na}{out}\PY{p}{.}\PY{n+na}{println}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{!=: }\PY{l+s}{\PYZdq{}} \PY{o}{+} \PY{p}{(}\PY{n}{normalString} \PY{o}{!}\PY{o}{=} \PY{n}{byteStr}\PY{p}{)}\PY{p}{)}\PY{p}{;}
+        \PY{n}{System}\PY{p}{.}\PY{n+na}{out}\PY{p}{.}\PY{n+na}{println}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{!=: }\PY{l+s}{\PYZdq{}} \PY{o}{+} \PY{p}{(}\PY{n}{normalString} \PY{o}{!}\PY{o}{=} \PY{n}{charStr}\PY{p}{)}\PY{p}{)}\PY{p}{;}
         \PY{n}{System}\PY{p}{.}\PY{n+na}{out}\PY{p}{.}\PY{n+na}{println}\PY{p}{(}\PY{p}{)}\PY{p}{;}
 
         \PY{c+c1}{// Operators}
-        \PY{n}{System}\PY{p}{.}\PY{n+na}{out}\PY{p}{.}\PY{n+na}{println}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{+: }\PY{l+s}{\PYZdq{}} \PY{o}{+} \PY{p}{(}\PY{n}{normalString} \PY{o}{+} \PY{n}{byteStr}\PY{p}{)}\PY{p}{)}\PY{p}{;}
+        \PY{n}{System}\PY{p}{.}\PY{n+na}{out}\PY{p}{.}\PY{n+na}{println}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{+: }\PY{l+s}{\PYZdq{}} \PY{o}{+} \PY{p}{(}\PY{n}{normalString} \PY{o}{+} \PY{n}{charStr}\PY{p}{)}\PY{p}{)}\PY{p}{;}
     \PY{p}{\PYZcb{}}
 \PY{p}{\PYZcb{}}
 
@@ -1524,7 +1519,6 @@ Cast to String: A
 \end{tcolorbox}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-String from byte array: 
 String from char array: Az
 String from int array: A@
 
@@ -1532,15 +1526,15 @@ Char at: i
 Code point at: 105
 Code point before: 104
 Code point count: 2
-Compare to: 83
-Compare to (ignore case): 115
-Concat strings: This is a normal String
+Compare to: 19
+Compare to (ignore case): 19
+Concat strings: This is a normal StringAz
 Copy String: ABC
 Ends with: true
 Starts with: true
 Equals: false
 Equals (Ignore case): false
-Get Chars: [C@430d36c3
+Get Chars: [C@57c7de31
 Index of: 0
 Last Index of (char): 0
 Last Index of (string): 0
@@ -1561,7 +1555,7 @@ Trim string (remove whitespaces and convert codepoints): stripped
 Subsequence: This is a
 Substring: s is a normal String
 Substring: This is a
-Convert to char array: [C@49f55db3
+Convert to char array: [C@59003ab9
 Convert to lower case: this is a normal string
 Convert to upper case: THIS IS A NORMAL STRING
 Convert to string: This is a normal String
@@ -1576,7 +1570,7 @@ Long: 12341423453254
 Hashcode: -1745751625
 !=: true
 
-+: This is a normal String
++: This is a normal StringAz
     \end{Verbatim}
 
     \hypertarget{array}{%
